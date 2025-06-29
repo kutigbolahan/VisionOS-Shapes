@@ -16,7 +16,10 @@ struct ContentView: View {
         let shapeScale: CGFloat = 100.0
         let strokeWidth: CGFloat = 5.0
         
-        HStack(spacing: spaceBetweenShapes){}
+        HStack(spacing: spaceBetweenShapes){
+            Circle().stroke(lineWidth: strokeWidth).frame(width:shapeScale, height: shapeScale)
+            Rectangle().stroke(lineWidth: strokeWidth).frame(width: shapeScale, height: shapeScale)
+        }
         
         
     }
