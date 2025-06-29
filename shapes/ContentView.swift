@@ -20,10 +20,16 @@ struct ContentView: View {
         let vertex2 = CGPoint(x:shapeScale, y: shapeScale)
         let vertex3 = CGPoint(x:0.0, y: shapeScale)
         
+        let strokePattern = [3 * strokeWidth, 2 * strokeWidth]
+        
         HStack(spacing: spaceBetweenShapes){
             Circle().stroke(lineWidth: strokeWidth).frame(width:shapeScale, height: shapeScale)
             Rectangle().stroke(lineWidth: strokeWidth).frame(width: shapeScale, height: shapeScale)
             Triangle(vertex1: vertex1, vertex2: vertex2, vertex3: vertex3).stroke(lineWidth: strokeWidth).frame(width:shapeScale, height: shapeScale)
+            
+//            Line(endpoint1: CGPoint, endpoint2: CGPoint)
+//                           .dashed(strokeWidth, strokePattern)
+//                           .frame(width: shapeScale, height: shapeScale)
         }
         
         

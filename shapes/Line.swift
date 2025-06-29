@@ -22,3 +22,11 @@ struct Line: Shape{
         
     }
 }
+
+extension Line{
+    func dashed(_ width: CGFloat, _ dashPattern: [CGFloat]? = nil)-> some Shape{
+        let pattern = dashPattern ?? [width]
+        let style = StrokeStyle(lineWidth: width, dash: pattern)
+        return stroke(style: style)
+    }
+}
