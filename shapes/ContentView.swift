@@ -12,15 +12,13 @@ import RealityKitContent
 struct ContentView: View {
 
     var body: some View {
-        VStack {
-            Model3D(named: "Scene", bundle: realityKitContentBundle)
-                .padding(.bottom, 50)
-
-            Text("Hello, world!")
-
-            ToggleImmersiveSpaceButton()
-        }
-        .padding()
+        let spaceBetweenShapes: CGFloat = 30.0
+        let shapeScale: CGFloat = 100.0
+        let strokeWidth: CGFloat = 5.0
+        
+        HStack(spacing: spaceBetweenShapes){}
+        
+        
     }
 }
 
